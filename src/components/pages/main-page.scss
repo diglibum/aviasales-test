@@ -1,0 +1,19 @@
+.app {
+    &__informer {
+        flex-grow: 1;
+        width: 232px;
+        margin-right: 20px;
+        padding-top: 20px;
+
+        &__filters {
+            background: #FFFFFF;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    }
+
+    &__content {
+        flex-grow: 3;
+        padding-top: 20px;
+    }
+}

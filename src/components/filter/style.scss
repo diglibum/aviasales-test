@@ -1,0 +1,82 @@
+.filter {
+    &__header {
+        color: #4A4A4A;
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 20px;
+    }
+
+    &__content {
+        font-size: 13px;
+        line-height: 20px;
+        color: #4A4A4A;
+        padding-bottom: 20px;
+    }
+
+    .checkboxes-list {
+        &__item {
+            height: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            input[type="checkbox"] {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+
+
+                &+label {
+                    display: inline-flex;
+                    align-items: center;
+                    user-select: none;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &+label:hover {
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #F1FCFF;
+                    }
+                }
+
+                &+label::before {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                    border: 1px solid #9ABBCE;
+                    border-radius: 0.25em;
+                    margin-right: 10px;
+                    margin-left: 20px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 60% 60%;
+                }
+
+                &:checked+label::before {
+                    border-color: #2196F3;
+                    background-color: #FFFFFF;
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3e%3cpath fill='%232196F3' d='M4.28571 8L0 4.16123L1.20857 3.0787L4.28571 5.82726L10.7914 0L12 1.09021L4.28571 8Z'/%3e%3c/svg%3e");
+                }
+
+                /* active checked */
+                &:not(:disabled):active+label::before {
+                    background-color: #FFFFFF;
+                    border-color: #2196F3;
+                }
+
+                /* disabled */
+                &:disabled+label::before {
+                    background-color: #e9ecef;
+                }
+            }
+        }
+    }
+
+}

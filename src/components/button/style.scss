@@ -1,0 +1,22 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2196F3;
+    border-radius: 5px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 35px 0;
+    padding: 15px 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &-stretch {
+        flex-grow: 1;
+    }
+}
