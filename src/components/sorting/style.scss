@@ -1,44 +1,37 @@
-.sorting {
-    &__tabs {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        height: 50px;
-        margin-bottom: 20px;
-        border: 1px solid #DFE5EC;
+.tabs {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
-    &__tab {
-        cursor: pointer;
-        background-color: #FFFFFF;
-        color: #4A4A4A;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-grow: 1;
+    &__item {
+        padding: 14px;
+        text-align: center;
         font-weight: 600;
         font-size: 12px;
         line-height: 20px;
-        padding: 10px;
-        /* identical to box height, or 167% */
+        letter-spacing: 0.5px;
         text-transform: uppercase;
+        background-color: #fff;
+        cursor: pointer;
+        border: 1px solid #DFE5EC;
+        border-left: none;
 
         &:first-child {
-            border-radius: 5px 0 0 5px;
-            border-right: 1px solid #DFE5EC;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-left: 1px solid #DFE5EC;
         }
 
         &:last-child {
-            border-radius: 0 5px 5px 0;
-            border-left: 1px solid #DFE5EC;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
-    }
 
-    .active-tab {
-        background: #2196F3;
-        border: 1px solid #2196F3;
-        color: #FFFFFF;
+        &-active {
+            background-color: var(--main-color);
+            color: #fff;
+            border-color: var(--main-color);
+        }
     }
 }

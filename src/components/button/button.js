@@ -8,7 +8,7 @@ import './style.scss';
 class Button extends Component {
 
     componentDidMount() {
-        const btn = document.querySelector(".show-more-btn .btn");
+        const btn = document.querySelector(".btn.btn-stretch");
         const { showMoreTickets } = this.props;
 
         btn.addEventListener("click", (e) => {

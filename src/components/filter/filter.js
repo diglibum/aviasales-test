@@ -9,7 +9,7 @@ class Filter extends Component {
     checkboxes = [];
 
     componentDidMount() {
-        this.checkboxes = document.querySelectorAll(".filter .checkboxes-list__item input[type='checkbox']");
+        this.checkboxes = document.querySelectorAll(".transfer-filter .transfer-filter__item input[type='checkbox']");
         this.bindListeners(this.checkboxes);
     }
 
@@ -42,27 +42,27 @@ class Filter extends Component {
 
     render() {
         return (
-            <div className="filter">
-                <div className="filter__header">Количество пересадок</div>
-                <div className="filter__content">
-                    <div className="filter__controls checkboxes-list">
-                        <div className="checkboxes-list__item">
+            <div className="app__filters">
+                <div className="transfer-filter">
+                    <div className="transfer-filter__title">Количество пересадок</div>
+                    <div className="transfer-filter__wrapper">
+                        <div className="transfer-filter__item">
                             <input type="checkbox" id="stops" name="stops" />
                             <label htmlFor="stops">Все</label>
                         </div>
-                        <div className="checkboxes-list__item">
+                        <div className="transfer-filter__item">
                             <input type="checkbox" id="stops_0" name="stops_0" />
                             <label htmlFor="stops_0">Без пересадок</label>
                         </div>
-                        <div className="checkboxes-list__item">
+                        <div className="transfer-filter__item">
                             <input type="checkbox" id="stops_1" name="stops_1" />
                             <label htmlFor="stops_1">1 пересадка</label>
                         </div>
-                        <div className="checkboxes-list__item">
+                        <div className="transfer-filter__item">
                             <input type="checkbox" id="stops_2" name="stops_2" />
                             <label htmlFor="stops_2">2 пересадки</label>
                         </div>
-                        <div className="checkboxes-list__item">
+                        <div className="transfer-filter__item">
                             <input type="checkbox" id="stops_3" name="stops_3" />
                             <label htmlFor="stops_3">3 пересадки</label>
                         </div>

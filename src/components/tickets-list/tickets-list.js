@@ -10,14 +10,14 @@ export default class TicketsList extends Component {
         const items = tickets.map((item) => {
             const itemKey = "" + item.price + item.carrier + Date.parse(item.segments[0].date) + Date.parse(item.segments[1].date);
             return (
-                <div key={itemKey} className="product-list__item">
+                <div key={itemKey} className="ticket">
                     <TicketItem ticket={item} />
                 </div>
             );
         });
 
         return (
-            <div className="product-list">
+            <div className="tickets-list">
                 {items}
             </div>
         )

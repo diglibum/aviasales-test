@@ -30,7 +30,7 @@ export default class TicketItem extends Component {
 
         return (
 
-            <div className="ticket">
+            <div className="ticket__wrapper">
                 <div className="ticket__header">
                     <div className="ticket__header__price">
                         {numberWithSpaces(price)} P
@@ -38,7 +38,6 @@ export default class TicketItem extends Component {
                     <div className="ticket__header__carrier-logo">
                         <img src={logoPath} alt={carrier} />
                     </div>
-
                 </div>
                 <div className="ticket__content">
                     {segmentsItems}
@@ -53,20 +52,20 @@ const SegmentView = ({ segment }) => {
     const { origin, destination, duration, timeFrom, timeTo, stopsHeader, stops } = segment;
 
     return (
-        <div className="ticket-segment">
+        <>
             <div className="segment-route departure">
                 <div className="label">{origin} - {destination}</div>
-                {timeFrom} - {timeTo}
+                <span>{timeFrom} - {timeTo}</span>
             </div>
             <div className="segment-route time">
                 <div className="label">В пути</div>
-                {duration}
+                <span>{duration}</span>
             </div>
             <div className="segment-route time">
                 <div className="label">{stopsHeader}</div>
-                {stops}
+                <span>{stops}</span>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -8,21 +8,24 @@ import './style.scss';
 const App = () => {
 
     return (
-        <div className="wrapper">
-            <div className="app">
-                <div className="app__header">
+        <div className="app">
+            <div className="app__header">
+                <div className="container">
                     <div className="app__header-logo">
                         <img src={Logo} alt="Aviasales test" />
                     </div>
                 </div>
-                <div className="app__inner">
-                    <Switch>
-                        <Route path="/" component={MainPage} />
-                    </Switch>
+            </div>
+            <div className="app__content">
+                <div className="container">
+                    <div className="app__wrapper">
+                        <Switch>
+                            <Route path="/" component={MainPage} />
+                        </Switch>
+                    </div>
                 </div>
             </div>
         </div>
-
     )
 };
 export default App;

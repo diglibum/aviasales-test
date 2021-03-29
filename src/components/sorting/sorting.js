@@ -8,7 +8,7 @@ class Sorting extends Component {
 
     componentDidMount() {
         const { sortingChanged } = this.props;
-        this.tabs = document.querySelectorAll(".sorting__tab");
+        this.tabs = document.querySelectorAll(".tabs__item");
 
         this.tabs.forEach(item => {
             item.addEventListener("click", (e) => {
@@ -35,21 +35,21 @@ class Sorting extends Component {
         }
         tabs.forEach(item => {
             if (sortingName.length > 0 && item.getAttribute("id") === sortingName) {
-                item.classList.add("active-tab");
+                item.classList.add("tabs__item-active");
             }
-            else item.classList.remove("active-tab");
+            else item.classList.remove("tabs__item-active");
         });
     }
 
 
     render() {
         return (
-            <div className="sorting">
-                <ul className="sorting__tabs">
-                    <li className="sorting__tab" id="cheapest">Самый дешёвый</li>
-                    <li className="sorting__tab" id="fastest">Самый быстрый</li>
-                    <li className="sorting__tab" id="optimal">Самый оптимальный</li>
-                </ul>
+            <div className="tabs">
+                <div className="tabs__wrapper">
+                    <div className="tabs__item" id="cheapest">Самый дешевый</div>
+                    <div className="tabs__item tabs__item-active" id="fastest">Самый быстрый</div>
+                    <div className="tabs__item" id="optimal">Оптимальный</div>
+                </div>
             </div>
         )
     }

@@ -65,19 +65,13 @@ class MainPage extends Component {
 
         return (
             <>
-                <div className="app__informer">
-                    <div className="app__informer__filters">
-                        <Filter />
-                    </div>
-                </div>
-                <div className="app__content">
+                <Filter />
+                <div className="content">
                     <Sorting />
                     {spinner}
                     {errorMessage}
                     <TicketsList tickets={filtredTickets} />
-                    <div className="show-more-btn">
-                        {btn}
-                    </div>
+                    {btn}
                 </div>
             </>
         )
